@@ -11,12 +11,15 @@ for file in *; do
     fi
 done
 
-file="`basename $newest_file` .mp4"
+file="`basename $newest_file`.mp4"
 output="$newest_file-converted.mp4"
 
-echo ">>>>> convert-yt.sh $newest_file $output <<<<<"
+echo ">>>>> Converting $newest_file $output <<<<<"
 
-convert-yt.sh $newest_file $output
+convert-yoiutube.sh $newest_file $output
+
+wq
+upload-yt.st $output
 
 start .
 
