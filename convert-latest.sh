@@ -16,7 +16,7 @@ output="$newest_file-converted.mp4"
 
 echo ">>>>> Converting $newest_file $output <<<<<"
 
-convert-yt.sh $newest_file $output
+convert-yoiutube.sh $newest_file $output
 
 wq
 upload-yt.st $output
